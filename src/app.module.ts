@@ -6,6 +6,7 @@ import { JobModule } from './job/job.module';
 import { AlarmModule } from './alarm/alarm.module';
 import { AuditModule } from './audit/audit.module';
 import { OeeModule } from './oee/oee.module';
+import { WashRecordModule } from './wash-record/wash-record.module';
 import { SeedService } from './seed/seed.service';
 import { Line } from './line/entities/line.entity';
 import { Segment } from './line/entities/segment.entity';
@@ -17,6 +18,7 @@ import { Step } from './program-template/entities/step.entity';
 import { Job } from './job/entities/job.entity';
 import { JobStep } from './job/entities/job-step.entity';
 import { Measurement } from './job/entities/measurement.entity';
+import { WashRecord } from './wash-record/entities/wash-record.entity';
 
 @Module({
   imports: [
@@ -38,6 +40,7 @@ import { Measurement } from './job/entities/measurement.entity';
       Job,
       JobStep,
       Measurement,
+      WashRecord,
     ]),
     LineModule,
     ProgramTemplateModule,
@@ -45,6 +48,7 @@ import { Measurement } from './job/entities/measurement.entity';
     AlarmModule,
     AuditModule,
     OeeModule,
+    WashRecordModule,
   ],
   providers: [SeedService],
 })
